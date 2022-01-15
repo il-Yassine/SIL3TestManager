@@ -20,6 +20,9 @@ use App\Http\Controllers\StatusController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/a', function () {
+    return view('welcome');
+});
 
 
 Route::get('/deconnexion', function () {
