@@ -31,10 +31,10 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                @if($taches->count()==0)
+                @if($tasks->count()==0)
                   <h3>0</h3>
                 @else
-                  <h3>{{$taches->count()}}</h3>
+                  <h3>{{$tasks->count()}}</h3>
                 @endif
 
 

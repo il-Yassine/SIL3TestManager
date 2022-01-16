@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -16,6 +17,7 @@ class UserController extends Controller
     public function index()
     {
         $users=User::all();
+
         return view('dashboard.users.index', compact('users'));
     }
 
@@ -113,7 +115,7 @@ class UserController extends Controller
 
     public function profile()
     {
-      dd($user=User::all());
-        return view('dashboard.profile', compact('users'));
+      $user=User::all();
+        return view('dashboard.profile', compact('user'));
     }
 }

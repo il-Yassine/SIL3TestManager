@@ -80,8 +80,12 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
+        $statuses=Status::all();
+        $status=Status::where('nom', 'actif')->get();
+
         $task=Task::findOrfail($id);
-        return view('dashboard\tasks\edit',compact('task'));
+        $task->statuses()->attach($status);
+        return view('dashboard\tasks\edit',compact('task','status','statuses'));
     }
 
     /**

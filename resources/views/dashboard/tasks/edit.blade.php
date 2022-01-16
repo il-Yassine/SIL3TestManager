@@ -21,14 +21,14 @@
         <select class="form-control mb-3" name="status_id" value='id' required="">
             <option>Selectionnez une couleur</option>
 
-            {{--  @foreach($statuses as $key=> $status)
+            @foreach($statuses as $key=> $status)
 
 
-            <option class="bg-primary" value="primary" {{$status->nom}} ></option>
+            <option class="bg-primary" value="primary" {{$status->nom}} >{{$status->nom}}</option>
 
 
 
-            @endforeach  --}}
+            @endforeach
 
           </select>
           <!-- /.col -->
