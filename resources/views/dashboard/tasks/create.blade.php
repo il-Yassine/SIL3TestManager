@@ -16,6 +16,9 @@
         <div class="input-group mb-3">
           <input type="date" class="form-control" placeholder="Delai" name="delai"  value="{{ old('delai')}}" required>
         </div>
+        <div class="input-group mb-3">
+            <textarea class="form-control" placeholder="Commentaire" rows="6" name="commentaire" required>{{ old('commentaire')}}</textarea>
+         </div>
           <!-- /.col -->
           <div class="col-md-12 text-center">
             <button type="submit" style="text-align:center" class="btn btn-primary btn-block">Enregistrer</button>

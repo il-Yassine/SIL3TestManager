@@ -12,6 +12,7 @@ class Task extends Model
         'nom',
         'delai',
         'description',
+        'commentaire',
         'user_id'
 
     ];

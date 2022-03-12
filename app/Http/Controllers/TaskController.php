@@ -43,13 +43,16 @@ class TaskController extends Controller
         $this->validate($request,[
             'nom'=>'required|string',
             'description'=>'nullable',
-            'delai'=>'required|date'
+            'delai'=>'required|date',
+            'commentaire'=>'required|string',
         ]);
         $task= Task::create([
             'nom' =>$request->nom,
             'description'=>$request->desc,
             'delai'=>$request->delai,
-            'user_id'=>auth()->user()->id
+            'commentaire'=>$request->commentaire,
+            'user_id'=>auth()->user()->id,
+
 
         ]);
         $status=Status::where('nom', 'actif')->get();
@@ -101,11 +104,13 @@ class TaskController extends Controller
             'nom'=> 'required|string',
             'description'=>'nullable',
             'delai'=>'required|string',
+            'commentaire'=>'nullable',
         ]);
         $task=Task::findOrfail($id);
         $task->nom=$request->nom;
         $task->description=$request->desc;
         $task->delai=$request->delai;
+        $task->commentaire=$request->commentaire;
         $task->save();
 
         $status=Status::findOrfail($request->status_id);

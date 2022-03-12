@@ -14,7 +14,7 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>#</th>
+                    <th># </th>
                     <th>id</th>
                     <th>Nom</th>
                     <th>Délai</th>
@@ -48,6 +48,15 @@
 
                       </a>
                       </td>
+                      <td>
+                        @foreach ($task->statuses as $status )
+                        {{  $status->nom }}
+                         {{--  Le {{  $status->pivot->created_at }}  --}}
+                         <br>
+
+                        @endforeach
+                      </td>
+                      <td>{{$task->commentaire}}</td>
                     </tr>
                     @endforeach
                   </tbody>

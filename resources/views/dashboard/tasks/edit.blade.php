@@ -31,6 +31,9 @@
             @endforeach
 
           </select>
+          <div class="input-group mb-3">
+            <textarea class="form-control" placeholder="Commentaire" rows="6" name="commentaire" required>{{ $task->commentaire}}</textarea>
+         </div>
           <!-- /.col -->
           <div class="col-md-12 text-center">
             <button type="submit" style="text-align:center" class="btn btn-primary btn-block">Enregistrer</button>

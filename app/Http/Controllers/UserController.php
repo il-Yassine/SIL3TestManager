@@ -115,7 +115,6 @@ class UserController extends Controller
 
     public function profile()
     {
-      $user=User::all();
-        return view('dashboard.profile', compact('user'));
+        return view('dashboard.profile');
     }
 }
